@@ -10,7 +10,7 @@ export default function Darkmode({ onClick, iconImg }: DarkmodeProps) {
       {/* <div className={`${activatingDarkMode ? "bg-black text-white" : "bg-white text-black"}`}></div> */}
       <button className="w-[1.5rem] h-[1.5rem] cursor-pointer" onClick={onClick}>
         <img
-          src={`${iconImg ? "/icon_light_mode.png" : "/icon_dark-mode.png"}`}
+          src={`${iconImg ? "/icon_light-mode.png" : "/icon_dark-mode.png"}`}
           alt="darkmode icon"
           className="object-contain"
         />
