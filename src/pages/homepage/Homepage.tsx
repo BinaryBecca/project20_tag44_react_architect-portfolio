@@ -1,12 +1,15 @@
-import Contacts from "../../components/contacts/Contacts"
 import Headline from "../../components/headline/Headline"
 import Button from "../../components/button/Button"
 
-export default function Homepage() {
+interface HomepageProps {
+  activatingDarkMode: boolean
+}
+
+export default function Homepage({ activatingDarkMode }: HomepageProps) {
   return (
     <>
       <section className="grid grid-cols-[1fr_2fr] gap-[1rem] items-center mb-[4rem]">
-        <Headline headline="PROJECT" headline2="Lorum" />
+        <Headline headline="PROJECT" headline2="Lorum" activatingDarkMode={activatingDarkMode} />
 
         <div className="relative">
           <img src="/Home1.jpg" alt="house" className="object-contain" />

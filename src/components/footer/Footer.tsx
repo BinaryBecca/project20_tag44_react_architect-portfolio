@@ -1,10 +1,13 @@
-import React from "react"
 import { Link } from "react-router"
 
-export default function Footer() {
+interface FooterProps {
+  activatingDarkMode: boolean
+}
+
+export default function Footer({ activatingDarkMode }: FooterProps) {
   return (
     <>
-      <article className=" bg-black text-white mt-[2rem]">
+      <article className={`mt-[2rem] ${activatingDarkMode ? "bg-white text-black" : "bg-black text-white"}`}>
         <section className="flex flex-row justify-between items-start p-[3rem] mb-[2rem] w-full">
           <img src="/icon_logo_white.png" alt="" />
 

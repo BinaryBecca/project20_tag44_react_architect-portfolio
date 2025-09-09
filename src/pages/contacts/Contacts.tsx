@@ -1,11 +1,15 @@
 import Button from "../../components/button/Button"
 import Headline from "../../components/headline/Headline"
 
-export default function Contacts() {
+interface ContactProps {
+  activatingDarkMode: boolean
+}
+
+export default function Contacts({ activatingDarkMode }: ContactProps) {
   return (
     <>
       <article className="flex flex-col mb-[4rem]">
-        <Headline headline="Contact Us" />
+        <Headline headline="Contact Us" activatingDarkMode={activatingDarkMode} />
 
         <section className="grid grid-cols-[1fr_2fr] gap-[1rem]">
           <fieldset className="flex flex-col items-start justify-between gap-[.8rem]">

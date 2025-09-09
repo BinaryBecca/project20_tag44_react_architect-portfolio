@@ -6,7 +6,7 @@ import Loader from "../components/loader/Loader"
 // import Darkmode from "../components/darkmode/Darkmode"
 
 // interface LayoutProps {
-//   onClick: () => void
+//   activatingDarkMode: boolean
 //   iconImg?: boolean
 // }
 
@@ -36,12 +36,12 @@ export default function Layout() {
           <Loader />
         ) : (
           <div className={`${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
-            <Header onClick={changingMode} iconImg={darkMode} />
+            <Header onClick={changingMode} activatingDarkMode={darkMode} />
             {/* <Darkmode onClick={changingMode} iconImg={darkMode} /> */}
             <main className="pl-[2rem] pr-[2rem]">
               <Outlet />
             </main>
-            <Footer />
+            <Footer activatingDarkMode={darkMode} />
           </div>
         )}
       </div>

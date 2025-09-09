@@ -7,16 +7,20 @@ import Gallery from "./pages/gallery/Gallery"
 import Projects from "./pages/projects/Projects"
 import Certifications from "./pages/certifications/Certifications"
 
-function App() {
+interface AppProps {
+  activatingDarkMode: boolean
+}
+
+function App({ activatingDarkMode }: AppProps) {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Homepage />} />
+          <Route index element={<Homepage activatingDarkMode={activatingDarkMode} />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="projects" element={<Projects />} />
           <Route path="certifications" element={<Certifications />} />
-          <Route path="contacts" element={<Contacts />} />
+          <Route path="contacts" element={<Contacts activatingDarkMode={activatingDarkMode} />} />
         </Route>
       </>
     )

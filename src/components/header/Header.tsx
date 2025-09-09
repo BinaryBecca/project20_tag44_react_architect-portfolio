@@ -2,14 +2,14 @@ import Nav from "../nav/Nav"
 
 interface HeaderProps {
   onClick: () => void
-  iconImg?: boolean
+  activatingDarkMode: boolean
 }
 
-export default function Header({ onClick, iconImg }: HeaderProps) {
+export default function Header({ onClick, activatingDarkMode }: HeaderProps) {
   return (
     <>
       <header>
-        <Nav onClick={onClick} iconImg={iconImg} />
+        <Nav onClick={onClick} activatingDarkMode={activatingDarkMode} />
       </header>
     </>
   )

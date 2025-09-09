@@ -1,12 +1,12 @@
-import { Link, NavLink } from "react-router"
+import { NavLink } from "react-router"
 import Darkmode from "../darkmode/Darkmode"
 
 interface NavProps {
   onClick: () => void
-  iconImg?: boolean
+  activatingDarkMode: boolean
 }
 
-export default function Nav({ onClick, iconImg }: NavProps) {
+export default function Nav({ onClick, activatingDarkMode }: NavProps) {
   const linkClass = ({ isActive }: { isActive: boolean }) => `${isActive ? "border-t border-b py-[1rem]" : "py-[1rem]"}`
 
   return (
@@ -37,7 +37,7 @@ export default function Nav({ onClick, iconImg }: NavProps) {
 
         {/* <img src="/icon_dark-mode.png" alt="darkmode icon" className="w-[1.5rem] h-[1.5rem] object-contain" /> */}
         <div>
-          <Darkmode onClick={onClick} iconImg={iconImg} />
+          <Darkmode onClick={onClick} activatingDarkMode={activatingDarkMode} />
         </div>
       </nav>
     </>
